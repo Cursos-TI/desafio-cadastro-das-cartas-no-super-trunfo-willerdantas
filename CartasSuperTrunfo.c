@@ -26,6 +26,7 @@ int main() {
     int populacao1, populacao2, ponto_turistico1, ponto_turistico2;
     float area1, area2, pib1, pib2;
 
+    printf("Cadastrar carta 01");
     printf("Didite uma letra de A a H que identifica o estado: \n");
     scanf("%s", &estado1);
 
@@ -46,6 +47,28 @@ int main() {
 
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &ponto_turistico1);
+
+    printf("Cadastrar carta 02");
+    printf("Didite uma letra de A a H que identifica o estado: \n");
+    scanf("%s", &estado2);
+
+    printf("Digite o código da carta: \n");
+    scanf("%s", &cod_carta2);
+
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", &nome_cidade2);
+
+    printf("Digite a população da cidade: \n");
+    scanf("%d", &populacao2);
+
+    printf("Digite a área da cidade: \n");
+    scanf("%f", &area2);
+
+    printf("Digite o PIB da cidade: \n");
+    scanf("%f", &pib2);
+
+    printf("Digite o número de pontos turísticos: \n");
+    scanf("%d", &ponto_turistico2);
 
     return 0;
 }
