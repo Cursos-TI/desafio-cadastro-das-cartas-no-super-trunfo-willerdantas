@@ -27,6 +27,7 @@ int main() {
     float area1, area2, pib1, pib2;
     float dens_populacional1, dens_populacional2;
     float pib_percapito1, pib_percapito2;
+    float superPoder1, superPoder2;
 
     printf("Cadastrar carta 01\n");
     printf("Digite uma letra de A a H que identifica o estado: \n");
@@ -85,7 +86,9 @@ int main() {
     printf("Densidade populacional: %.2f hab/km² \n", dens_populacional1);
     pib_percapito1 = pib1 / populacao1;
     printf("PIB per capita: %.2f reais \n", pib_percapito1);
+    printf("Super Poder: %.2f \n", superPoder1 = (float)(populacao1 + area1 + pib1 + ponto_turistico1 + dens_populacional1 + pib_percapito1));
     printf("\n");
+
     printf("Carta 2:");
     printf("Estado: %c \n", estado2);
     printf("Código: %s \n", cod_carta2);
@@ -98,6 +101,17 @@ int main() {
     printf("Densidade populacional: %.2f hab/km² \n", dens_populacional2);
     pib_percapito2 = pib2 / populacao2;
     printf("PIB per capita: %.2f reais \n", pib_percapito2);
+    printf("Super Poder: %.2f \n", superPoder2 = (float)(populacao2 + area2 + pib2 + ponto_turistico2 + dens_populacional2 + pib_percapito2));
+    printf("\n");
+
+    printf("Comparação das cartas:\n");
+    printf("População: Carta 1 - %s vence (%d), Carta 2 - %s vence (%d)\n", cod_carta1, populacao1 > populacao2, cod_carta2, populacao2 > populacao1);
+    printf("Área: Carta 1 - %s vence (%d), Carta 2 - %s vence (%d)\n", cod_carta1, area1 > area2, cod_carta2, area2 > area1);
+    printf("PIB: Carta 1 - %s vence (%d), Carta 2 - %s vence (%d)\n", cod_carta1, pib1 > pib2, cod_carta2, pib2 > pib1);
+    printf("Pontos Turísticos: Carta 1 - %s vence (%d), Carta 2 - %s vence (%d)\n", cod_carta1, ponto_turistico1 > ponto_turistico2, cod_carta2, ponto_turistico2 > ponto_turistico1);
+    printf("Densidade Populacional: Carta 1 - %s vence (%d), Carta 2 - %s vence (%d)\n", cod_carta1, dens_populacional1 < dens_populacional2, cod_carta2, dens_populacional2 < dens_populacional1);
+    printf("PIB per Capita: Carta 1 - %s vence (%d), Carta 2 - %s vence (%d)\n", cod_carta1, pib_percapito1 > pib_percapito2, cod_carta2, pib_percapito2 > pib_percapito1);
+    printf("Super Poder: Carta 1 - %s vence (%d)\n", cod_carta1, superPoder1 > superPoder2);
 
     return 0;
 }
